@@ -1,0 +1,30 @@
+#include "monty.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+int main(void)
+{
+	int i;
+	char *str = "sljfls aslfjlksd f sdlkfjsdlf";
+        int length;
+        char b[80];
+	char *opcode;
+	char *number;
+        char *token;
+
+        length =  strlen(str);
+	printf("%s", str);
+        for (i = 0; i < length; i++)
+		b[i] = str[i];
+        for (i = 0; i < 80; i++)
+                b[i] = 0;
+	printf("%s", b);
+	strcpy(b, str);
+        token = strtok(b, " ");
+        opcode = token;
+        token = strtok(NULL, " ");
+        number = token;
+	printf("opcode: %s", opcode);
+}
